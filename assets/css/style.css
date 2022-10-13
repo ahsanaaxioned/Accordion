@@ -261,7 +261,11 @@ h1 {
   right: 0;
 }
 
-.faq-item.active .btn::before{ content: "\f106" }
+.faq-item.active .btn::before{ 
+  transform: rotate(180deg);
+  transition: all .3s ease;
+ }
+ 
 .faq-item.active .answer{ height: 100%; }
 /*=================================
   main styling ends here
