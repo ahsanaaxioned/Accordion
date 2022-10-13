@@ -266,7 +266,22 @@ h1 {
   transition: all .3s ease;
  }
  
-.faq-item.active .answer{ height: 100%; }
+.faq-item.active .answer{ 
+  height: 100%;
+  transition: all .3s ease-in-out;
+  animation: fade .3s ease-in-out;
+ }
+
+ @keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+ }
 /*=================================
   main styling ends here
 =================================*/
