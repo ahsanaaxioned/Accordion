@@ -203,7 +203,6 @@ li {
   width: 80%;
   margin: 0 auto;
 }
-
 /*=================================
   Header styling starts here
 =================================*/
@@ -214,7 +213,6 @@ h1 {
   text-align: center;
   text-transform: uppercase;
 }
-
 /*=================================
   Header styling ends here
 =================================*/
@@ -222,7 +220,7 @@ h1 {
 /*=================================
   main styling starts here
 =================================*/
-.faq-item{
+.faq-item {
   border-bottom: 2px solid #fff;
   margin-bottom: 30px;
 }
@@ -235,29 +233,36 @@ h1 {
 }
 
 .answer {
+  height: 0;
+  margin-bottom: 15px;
   font-size: 20px;
   line-height: 30px;
-  padding: 0 10px 10px 0;
+  overflow: hidden;
 }
 
-.btn{
-  text-indent: -9999px;
+.btn {
   display: block;
+  text-indent: -9999px;
 }
 
-.btn::before{
+.btn::before {
   content: "\f107";
-  font-family: "FontAwesome";
   float: left;
-  text-indent: 0;
+  cursor: pointer;
+  font-family: "FontAwesome";
   font-size: 35px;
+  text-indent: 0;
 }
 
+.faq-item { position: relative; }
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-
-
-
-
+.faq-item.active .btn::before{ content: "\f106" }
+.faq-item.active .answer{ height: 100%; }
 /*=================================
   main styling ends here
 =================================*/
