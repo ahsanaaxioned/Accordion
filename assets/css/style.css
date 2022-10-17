@@ -255,7 +255,11 @@ h1 {
   text-indent: 0;
 }
 
-.faq-item { position: relative; }
+.faq-item { 
+  position: relative;
+  cursor: pointer;
+ }
+
 .close {
   position: absolute;
   top: 0;
